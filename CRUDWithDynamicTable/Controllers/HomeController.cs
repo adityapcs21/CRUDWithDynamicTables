@@ -60,7 +60,7 @@ namespace CRUDWithDynamicTable.Controllers
         {
             userDetails.GetDeleteDetail(id);
 
-            return RedirectToAction("Index");
+            return Json(new { data = true });
         }
 
 

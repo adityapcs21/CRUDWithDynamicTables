@@ -56,10 +56,9 @@ function InsertUser() {
         contentType: 'application/json',
         async: true,
         success: function (data) {
-            //window.reload();
-            //$("#addUser").hide();
-            //$("#addUser").addClass('hide');
+
             $('#addUser').modal('hide');
+            location.reload();
 
         }
 
@@ -77,6 +76,8 @@ function encodeImagetoBase64(element) {
     reader.readAsDataURL(file);
 }
 
+//----------------Delete------------------------------------------------------------------------------------------
+
 
 function DeleteUser(Id) {
     debugger;
@@ -89,9 +90,10 @@ function DeleteUser(Id) {
             contentType: 'application/json',
             async: false,
             success: function (data) {
-                window.reload();
+                
                 //$("#addUser").hide();
                 //$("#addUser").addClass('hide');
+                location.reload();
             }
 
         });
@@ -137,8 +139,7 @@ function EditUser(Id) {
                 sno++;
             });
         }
-        //$("#editUser").hide();
-        //$("#editUser").addClass('hide');
+
 
 
     });
@@ -185,10 +186,9 @@ function UpdateUser() {
         contentType: 'application/json',
         async: false,
         success: function (data) {
-            //window.reload();
-            //console.log(data.success);
-            $('#EditUser').modal('hide');
 
+            $('#EditUser').modal('hide');
+            location.reload();
         }
 
     });
